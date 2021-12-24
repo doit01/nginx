@@ -1,3 +1,9 @@
+文件图片 nginx win
+location /zip/ {
+            alias C:/Users/bi_zhansheng/Downloads/zip/;
+             autoindex on;
+        }
+
 https://www.cnblogs.com/saneri/p/11778409.html
 下载nginx 改名放到/usr/local/nginx/   
 在其内
