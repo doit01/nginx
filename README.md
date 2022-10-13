@@ -1,3 +1,23 @@
+Nginx没有添加modules/ngx_http_stub_status_module.o模块
+没有安装的话，可以在configure编译的时候添加如下参数
+./configure --prefix=/usr/local/nginx --with-http_stub_status_module
+启用nginx status配置​
+大概Nginx配置文件，在默认主机里面加上location或者你希望能访问到的主机里面加上如下配置。
+
+location /status 
+{
+        stub_status on;
+        access_log off;            
+}
+​2. 重启nginx​
+操作命令比较简单，请依照你的环境重启你的nginx即可。
+
+​3. 打开status页面​
+在浏览器中输入nginx的地址：http://127.0.0.1/status，即可查看nginx的状态信息
+
+
+
+
 文件图片 nginx win
 location /zip/ {
             alias C:/Users/bi_zhansheng/Downloads/zip/;
